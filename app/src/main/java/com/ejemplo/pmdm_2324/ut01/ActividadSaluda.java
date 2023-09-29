@@ -1,8 +1,10 @@
-package com.ejemplo.pmdm_2324;
+package com.ejemplo.pmdm_2324.ut01;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.ejemplo.pmdm_2324.R;
 
 public class ActividadSaluda extends AppCompatActivity {
 
