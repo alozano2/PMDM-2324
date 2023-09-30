@@ -2,12 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/u2a2idtvColorRojo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ut02.u2a2Coloneitor">
 
     <SeekBar
-        android:id="@+id/u2a2idsbRojo"
+        android:id="@+id/u2a2idsbAzul"
         android:layout_width="280dp"
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,21 +27,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/u2a2idsbRojo"
-        app:layout_constraintVertical_bias="0.201" />
+        app:layout_constraintTop_toBottomOf="@+id/u2a2idsbAzul"
+        app:layout_constraintVertical_bias="0.127" />
 
     <TextView
         android:id="@+id/u2a2idtvDimeColor"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="207dp"
+        android:layout_height="123dp"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/u2a2idbtGenerar"
-        app:layout_constraintVertical_bias="0.246" />
+        app:layout_constraintVertical_bias="0.358" />
 
     <Switch
         android:id="@+id/u2a1idswContraste"
@@ -49,10 +49,10 @@
         android:text="Switch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintHorizontal_bias="0.907"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.652" />
+        app:layout_constraintVertical_bias="0.627" />
 
     <EditText
         android:id="@+id/u2a2idetColor"
@@ -60,28 +60,68 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="178dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.221" />
 
     <SeekBar
         android:id="@+id/u2a2idsbVerde"
         android:layout_width="280dp"
         android:layout_height="30dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/u2a2idsbRojo"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/u2a2idsbAzul"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
     <SeekBar
-        android:id="@+id/u2a2idsbAzul"
+        android:id="@+id/u2a2idsbRojo"
         android:layout_width="280dp"
         android:layout_height="30dp"
         app:layout_constraintBottom_toTopOf="@+id/u2a2idsbVerde"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/u2a2idetColor"
-        app:layout_constraintVertical_bias="0.779" />
+        app:layout_constraintVertical_bias="0.892" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rojo"
+        app:layout_constraintBottom_toTopOf="@+id/u2a2idetColorVerde"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.897" />
+
+    <TextView
+        android:id="@+id/u2a2idetColorVerde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.452" />
+
+    <TextView
+        android:id="@+id/u2a2idetColorAzul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Azul"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u2a2idetColorVerde"
+        app:layout_constraintVertical_bias="0.04" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
