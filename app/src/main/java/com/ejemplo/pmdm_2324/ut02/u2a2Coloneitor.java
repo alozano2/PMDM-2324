@@ -37,7 +37,6 @@ public class u2a2Coloneitor extends AppCompatActivity {
         sbAzul = findViewById(R.id.u2a2idsbAzul);
 
         btnGenerar.setOnClickListener((View v) -> {
-
             if(dimeColor.getText().toString().equalsIgnoreCase("Rojo") || dimeColor.getText().toString().equalsIgnoreCase("Verde")
             || dimeColor.getText().toString().equalsIgnoreCase("Azul")){
                 muestraColor.setText(dimeColor.getText());
