@@ -50,6 +50,9 @@ public class u2a3Propinatron2000 extends AppCompatActivity {
 
             if(v == btnC){
                 tvmuestraNumeros.setText("");
+                rbtnMalo.setChecked(false);
+                rbtnBueno.setChecked(false);
+                rbtnExcelente.setChecked(false);
             }else if(v == btnFlecha){
                 tvmuestraNumeros.setText(textoActual.substring(0, textoActual.length() - 1));
             }else if(v != rbtnMalo && v != rbtnBueno && v != rbtnExcelente){
