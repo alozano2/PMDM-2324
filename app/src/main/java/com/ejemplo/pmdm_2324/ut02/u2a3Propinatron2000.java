@@ -53,6 +53,7 @@ public class u2a3Propinatron2000 extends AppCompatActivity {
                 rbtnMalo.setChecked(false);
                 rbtnBueno.setChecked(false);
                 rbtnExcelente.setChecked(false);
+                tvPrecioFin.setText("");
             }else if(v == btnFlecha){
                 tvmuestraNumeros.setText(textoActual.substring(0, textoActual.length() - 1));
             }else if(v != rbtnMalo && v != rbtnBueno && v != rbtnExcelente){
@@ -61,15 +62,15 @@ public class u2a3Propinatron2000 extends AppCompatActivity {
             }
 
             if(rbtnMalo.isChecked()){
-                tvPrecioFin.setText(textoActual.toString());
+                tvPrecioFin.setText(textoActual.toString() + "€");
             }else if(rbtnBueno.isChecked()){
                 int precio = Integer.parseInt(textoActual);
                 double resultado = precio * 1.10;
-                tvPrecioFin.setText(String.valueOf(resultado));
-            } else if(rbtnExcelente.isChecked()) {
+                tvPrecioFin.setText(String.format("%.2f€",resultado));
+            }else if(rbtnExcelente.isChecked()) {
                 int precio = Integer.parseInt(textoActual);
                 double resultado = precio * 1.20;
-                tvPrecioFin.setText(String.valueOf(resultado));
+                tvPrecioFin.setText(String.format("%.2f€",resultado));
             }
         };
 
