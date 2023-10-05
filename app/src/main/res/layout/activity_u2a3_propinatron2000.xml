@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1BE1C4"
     tools:context=".ut02.u2a3Propinatron2000">
 
     <Button
@@ -82,6 +83,8 @@
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="118dp"
+        android:background="#E0B7B7"
+        android:backgroundTint="#FDFDFD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/u2a3tvNombreApp"
         app:layout_constraintHorizontal_bias="0.102"
@@ -95,6 +98,7 @@
         android:layout_width="260dp"
         android:layout_height="79dp"
         android:layout_marginEnd="16dp"
+        android:background="#E1B8B8"
         android:text="Propinatron2000"
         android:textAlignment="center"
         android:textColor="#6200ED"
@@ -181,8 +185,9 @@
 
     <TextView
         android:id="@+id/u2a3tvControlador"
-        android:layout_width="321dp"
-        android:layout_height="37dp"
+        android:layout_width="311dp"
+        android:layout_height="26dp"
+        android:background="#FBFBFB"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -207,12 +212,14 @@
             android:id="@+id/u2a3rdbtnMalo"
             android:layout_width="104dp"
             android:layout_height="match_parent"
+            android:background="#FCFCFC"
             android:text="Malo" />
 
         <RadioButton
             android:id="@+id/u2a3rdbtnBueno"
             android:layout_width="104dp"
             android:layout_height="match_parent"
+            android:background="#FDFDFD"
             android:text="Bueno" />
 
         <RadioButton
@@ -220,9 +227,24 @@
             android:layout_width="104dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#6200ED"
+            android:background="#DFB6B6"
+            android:backgroundTint="#FEFEFE"
             android:text="Excelente" />
 
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/u2a3tvPrecioFin"
+        android:layout_width="311dp"
+        android:layout_height="26dp"
+        android:background="#FCFCFC"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
