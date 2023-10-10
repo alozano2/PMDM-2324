@@ -51,13 +51,7 @@ public class u2a5CitaTron3000 extends AppCompatActivity {
             DatePickerDialog datePickerDialog = new DatePickerDialog(
 
                     u2a5CitaTron3000.this,
-                    new DatePickerDialog.OnDateSetListener() {
-                        @Override
-                        public void onDateSet(DatePicker view, int year,
-                                              int monthOfYear, int dayOfMonth) {
-                            tvDia.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-                        }
-                    },
+                    (view, year1, monthOfYear, dayOfMonth) -> tvDia.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year1),
                     year, month, day);
 
             fechaCita = tvDia.getText().toString();
