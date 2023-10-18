@@ -1,13 +1,13 @@
 package com.ejemplo.pmdm_2324.ut02;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.app.AlertDialog;
+import android.content.Context;
 import com.ejemplo.pmdm_2324.R;
 
 import java.util.Random;
@@ -19,6 +19,7 @@ public class u2a6PiedraPapel extends AppCompatActivity {
     ImageView imgViewPiedra, imgViewPapel, imgViewTijera, imgViewVictory, imgViewDefeat;
     Button btnReiniciar;
     final int PUNTUACION_MAXIMA = 3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,12 +66,24 @@ public class u2a6PiedraPapel extends AppCompatActivity {
         });
 
         btnReiniciar.setOnClickListener((View v) -> {
-            tvGanaTurno.setText(cadenaVacia);
-            tvTurno.setText(cadenaVacia);
-            tvContadorMaquina.setText(cadenaVacia);
-            tvContadorJugador.setText(cadenaVacia);
-            contadorMaquina.set(0);
-            contadorJugador.set(0);
+            u2a6PiedraPapel.showConfirmationDialog(this, "Confirmación", "¿Estás seguro de que deseas continuar?", () -> {
+                tvGanaTurno.setText(cadenaVacia);
+                tvTurno.setText(cadenaVacia);
+                tvContadorMaquina.setText(cadenaVacia);
+                tvContadorJugador.setText(cadenaVacia);
+                contadorMaquina.set(0);
+                contadorJugador.set(0);
+
+                imgViewPiedra.setVisibility(View.VISIBLE);
+                imgViewPapel.setVisibility(View.VISIBLE);
+                imgViewTijera.setVisibility(View.VISIBLE);
+                tvTurno.setVisibility(View.VISIBLE);
+                tvGanaTurno.setVisibility(View.VISIBLE);
+                tvGanaste.setVisibility(View.GONE);
+                imgViewVictory.setVisibility(View.GONE);
+                imgViewDefeat.setVisibility(View.GONE);
+                tvPerdiste.setVisibility(View.GONE);
+            });
         });
     }
         private void jugar (numeros eleccionJugador, AtomicInteger contadorJugador, AtomicInteger contadorMaquina) {
@@ -114,7 +127,6 @@ public class u2a6PiedraPapel extends AppCompatActivity {
                 imgViewPiedra.setVisibility(View.GONE);
                 imgViewPapel.setVisibility(View.GONE);
                 imgViewTijera.setVisibility(View.GONE);
-                btnReiniciar.setVisibility(View.GONE);
                 tvTurno.setVisibility(View.GONE);
                 tvGanaTurno.setVisibility(View.GONE);
                 tvGanaste.setVisibility(View.VISIBLE);
@@ -126,7 +138,6 @@ public class u2a6PiedraPapel extends AppCompatActivity {
                 imgViewPiedra.setVisibility(View.GONE);
                 imgViewPapel.setVisibility(View.GONE);
                 imgViewTijera.setVisibility(View.GONE);
-                btnReiniciar.setVisibility(View.GONE);
                 tvTurno.setVisibility(View.GONE);
                 tvGanaTurno.setVisibility(View.GONE);
                 tvPerdiste.setVisibility(View.VISIBLE);
@@ -134,6 +145,25 @@ public class u2a6PiedraPapel extends AppCompatActivity {
             }
         }
 
+    public static void showConfirmationDialog(Context context, String title, String message, final OnConfirmListener listener) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("Aceptar", (dialog, which) -> {
+                    // Si el usuario hace clic en "Aceptar", llama al método de confirmación.
+                    if (listener != null) {
+                        listener.onConfirm();
+                    }
+                })
+                .setNegativeButton("Cancelar", (dialog, which) -> {
+                    dialog.dismiss();
+                })
+                .show();
+    }
+
+    public interface OnConfirmListener {
+        void onConfirm();
+    }
     public enum numeros {
         OPCION_1, OPCION_2, OPCION_3
     }
