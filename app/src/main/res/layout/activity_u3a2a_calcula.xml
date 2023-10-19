@@ -23,33 +23,29 @@
         android:id="@+id/u3a2txtNum2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="42dp"
         android:ems="10"
         android:hint="Introduce un número"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/u3a2txtNum1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/u3a2txtNum1"
-        app:layout_constraintTop_toBottomOf="@+id/u3a2txtNum1"
-        app:layout_constraintVertical_bias="0.222" />
+        app:layout_constraintTop_toBottomOf="@+id/u3a2radiogrpOp" />
 
     <RadioGroup
         android:id="@+id/u3a2radiogrpOp"
-        android:layout_width="409dp"
-        android:layout_height="48dp"
+        android:layout_width="258dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/u3a2txtNum2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/u3a2txtNum1"
-        app:layout_constraintVertical_bias="0.378" >
+        app:layout_constraintEnd_toEndOf="@+id/u3a2txtNum1"
+        app:layout_constraintStart_toStartOf="@+id/u3a2txtNum1"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2txtNum1">
 
         <RadioButton
             android:id="@+id/u3a2radiobtnSuma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_weight="1"
             android:text="+"
             android:textSize="24sp" />
@@ -83,12 +79,10 @@
         android:id="@+id/u3a2btnCalcular"
         android:layout_width="152dp"
         android:layout_height="56dp"
+        android:layout_marginTop="90dp"
         android:text="Calcular"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/u3a2txtNum2"
-        app:layout_constraintVertical_bias="0.507" />
+        app:layout_constraintEnd_toEndOf="@+id/u3a2txtNum2"
+        app:layout_constraintStart_toStartOf="@+id/u3a2txtNum2"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2txtNum2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

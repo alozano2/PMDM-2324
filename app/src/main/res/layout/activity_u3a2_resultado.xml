@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".ut03.u3a2Resultado">
 
+    <TextView
+        android:id="@+id/u3a2tvResultado"
+        android:layout_width="160dp"
+        android:layout_height="136dp"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
