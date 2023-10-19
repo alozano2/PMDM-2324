@@ -8,11 +8,40 @@
 
     <TextView
         android:id="@+id/u3a2tvResultado"
-        android:layout_width="160dp"
-        android:layout_height="136dp"
+        android:layout_width="161dp"
+        android:layout_height="138dp"
+        android:gravity="center"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.522" />
+
+    <ImageView
+        android:id="@+id/u3a2imgContenta"
+        android:layout_width="161dp"
+        android:layout_height="138dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175"
+        app:srcCompat="@drawable/calculadoracontenta" />
+
+    <ImageView
+        android:id="@+id/u3a2imgTriste"
+        android:layout_width="161dp"
+        android:layout_height="138dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175"
+        app:srcCompat="@drawable/calculadoratriste" />
 </androidx.constraintlayout.widget.ConstraintLayout>
