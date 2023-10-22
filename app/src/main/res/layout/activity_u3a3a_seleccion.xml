@@ -6,4 +6,140 @@
     android:layout_height="match_parent"
     tools:context=".ut03.u3a3aSeleccion">
 
+    <TextView
+        android:id="@+id/u3a3atvVainilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="44dp"
+        android:text="VAINILLA"
+        android:textColor="#141515"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/u3a3atvFresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="FRESA"
+        android:textColor="#141515"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a3atvVainilla"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a3atvVainilla"
+        app:layout_constraintTop_toBottomOf="@+id/u3a3atvVainilla" />
+
+    <TextView
+        android:id="@+id/u3a3atvChocolate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="CHOCOLATE"
+        android:textColor="#141515"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/u3a3atvFresa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a3atvFresa"
+        app:layout_constraintTop_toBottomOf="@+id/u3a3atvFresa"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <EditText
+        android:id="@+id/u3a3aetCantVainilla"
+        android:layout_width="170dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="¿Cuantos quieres?"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/u3a3aetCantFresa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/u3a3atvVainilla"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.21" />
+
+    <EditText
+        android:id="@+id/u3a3aetCantFresa"
+        android:layout_width="170dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="¿Cuantos quieres?"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/u3a3aetCantChoco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toEndOf="@+id/u3a3atvFresa" />
+
+    <EditText
+        android:id="@+id/u3a3aetCantChoco"
+        android:layout_width="170dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="58dp"
+        android:ems="10"
+        android:hint="¿Cuantos quieres?"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/u3a3atvChocolate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.294" />
+
+    <TextView
+        android:id="@+id/u3a3atvTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="TIPO:"
+        android:textColor="#141515"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a3atvChocolate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a3atvChocolate"
+        app:layout_constraintTop_toBottomOf="@+id/u3a3atvChocolate" />
+
+    <Spinner
+        android:id="@+id/u3a3aSpEleccionTipo"
+        android:layout_width="144dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="52dp"
+        android:contextClickable="false"
+        android:entries="@array/tipoHelados"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.649"
+        app:layout_constraintStart_toEndOf="@+id/u3a3atvTipo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437" />
+
+    <Button
+        android:id="@+id/u3a3abtnGenerar"
+        android:layout_width="174dp"
+        android:layout_height="64dp"
+        android:text="Generar"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.777" />
+
+    <TextView
+        android:id="@+id/u3a3atvError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625" />
 </androidx.constraintlayout.widget.ConstraintLayout>

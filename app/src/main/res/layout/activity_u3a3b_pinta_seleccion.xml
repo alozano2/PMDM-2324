@@ -4,6 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#070707"
     tools:context=".ut03.u3a3bPintaSeleccion">
 
+    <TextView
+        android:id="@+id/u3a3btvEleccionVainilla"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="52dp"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/u3a3btvEleccionFresa"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a3btvEleccionVainilla"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a3btvEleccionVainilla"
+        app:layout_constraintTop_toBottomOf="@+id/u3a3btvEleccionVainilla" />
+
+    <TextView
+        android:id="@+id/u3a3btvEleccionChocolate"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="56dp"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/u3a3btvEleccionFresa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a3btvEleccionFresa"
+        app:layout_constraintTop_toBottomOf="@+id/u3a3btvEleccionFresa"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/u3a3btvEleccionTipo"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.668" />
 </androidx.constraintlayout.widget.ConstraintLayout>
