@@ -6,17 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".ut03.u3a1bLanzada">
 
-    <TextView
-        android:id="@+id/u3a1tvHola"
-        android:layout_width="129dp"
-        android:layout_height="127dp"
-        android:text="HOLA DAM!"
-        android:textAlignment="center"
-        android:textSize="34sp"
+    <EditText
+        android:id="@+id/u3a1etIngresarNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Número"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/u3a1btnAceptar"
+        android:layout_width="161dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="240dp"
+        android:text="Aceptar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a1etIngresarNumero" />
+
+    <Button
+        android:id="@+id/u3a1btnCancelar"
+        android:layout_width="149dp"
+        android:layout_height="60dp"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a1btnAceptar"
+        app:layout_constraintVertical_bias="0.278" />
 </androidx.constraintlayout.widget.ConstraintLayout>

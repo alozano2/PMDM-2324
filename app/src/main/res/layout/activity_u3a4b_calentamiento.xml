@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3a4bCalentamiento">
+
+    <EditText
+        android:id="@+id/u3a4betNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:ems="10"
+        android:hint="Escribe el nombre"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/u3a4bbtnAceptar"
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="56dp"
+        android:backgroundTint="#199A1D"
+        android:text="Aceptar"
+        app:layout_constraintEnd_toStartOf="@+id/u3a4bbtnCancelar"
+        app:layout_constraintTop_toBottomOf="@+id/u3a4betNombre" />
+
+    <Button
+        android:id="@+id/u3a4bbtnCancelar"
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="#CC2727"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a4betNombre"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/u3a4bbtnLimpiar"
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="436dp"
+        android:text="Limpiar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/u3a4bbtnCancelar"
+        app:layout_constraintStart_toStartOf="@+id/u3a4bbtnAceptar"
+        app:layout_constraintTop_toBottomOf="@+id/u3a4betNombre" />
+</androidx.constraintlayout.widget.ConstraintLayout>

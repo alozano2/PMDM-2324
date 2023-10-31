@@ -8,24 +8,38 @@
 
     <Button
         android:id="@+id/u3a1btnLanza"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Obtener número"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177" />
+
+    <TextView
+        android:id="@+id/u3a1tvNumero"
+        android:layout_width="207dp"
+        android:layout_height="79dp"
+        android:gravity="center"
+        android:text="Número"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/u3a1btnLanza"
+        app:layout_constraintVertical_bias="0.325" />
 
-    <EditText
-        android:id="@+id/u3a1txtName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="158dp"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="--"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/u3a1btnLanza"
-        app:layout_constraintStart_toStartOf="@+id/u3a1btnLanza"
-        app:layout_constraintTop_toBottomOf="@+id/u3a1btnLanza" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a1tvNumero" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
