@@ -37,7 +37,6 @@ public class u3a4aCalentamiento extends AppCompatActivity {
                     }
 
                     if(result.getResultCode() == Activity.RESULT_CANCELED){
-                        Intent data = result.getData();
                         tvAccion.setText(ACCION_CANCELADA);
                         tvAccion.setTextColor(getResources().getColor(R.color.red));
                     }
