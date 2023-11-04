@@ -17,7 +17,7 @@ public class u3a5aFibonacci extends AppCompatActivity {
     Button btnSiguienteNumero;
     public static final String CLAVE_NUM1 = "NUM1";
     public static final String CLAVE_NUM2 = "NUM2";
-    public static final String CLAVE_ERROR = "0";
+    public static final String CLAVE_ERROR = "ERROR 0-0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

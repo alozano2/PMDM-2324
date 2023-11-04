@@ -53,7 +53,7 @@ public class u3a6bLetrasDeTexto extends AppCompatActivity {
                             (e1, e2) -> e1,
                             LinkedHashMap::new
                     ));
-            }
+        }
         
         StringBuilder resultado = new StringBuilder();
         for (Map.Entry<String, Integer> entry : cuentaLetras.entrySet()) {

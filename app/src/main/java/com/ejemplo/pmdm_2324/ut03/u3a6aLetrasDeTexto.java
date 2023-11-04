@@ -38,9 +38,12 @@ public class u3a6aLetrasDeTexto extends AppCompatActivity {
                 result -> {
                     if(result.getResultCode() == Activity.RESULT_OK){
                         Intent data = result.getData();
-                        tvInfo.setText(CLAVE_PRINT + "1. " + data.getStringExtra(u3a6bLetrasDeTexto.CLAVE_PRIMERA) + "\n 2. " +
-                                data.getStringExtra(u3a6bLetrasDeTexto.CLAVE_SEGUNDA) + "\n 3. " +
-                                data.getStringExtra(u3a6bLetrasDeTexto.CLAVE_TERCERA));
+                        tvInfo.setText(CLAVE_PRINT + "1. " + data.getStringExtra(u3a6bLetrasDeTexto.CLAVE_PRIMERA) + " (" +
+                                data.getStringExtra(u3a6bLetrasDeTexto.CLAVE_NUMERO_PRIMERA) +  ")" + "\n 2. " +
+                                data.getStringExtra(u3a6bLetrasDeTexto.CLAVE_SEGUNDA) + " (" +
+                                data.getStringExtra(u3a6bLetrasDeTexto.CLAVE_NUMERO_SEGUNDA) +  ")" + "\n 3. " +
+                                data.getStringExtra(u3a6bLetrasDeTexto.CLAVE_TERCERA) + " (" +
+                                data.getStringExtra(u3a6bLetrasDeTexto.CLAVE_NUMERO_TERCERA) +  ")");
                     }
 
                     if(result.getResultCode() == Activity.RESULT_CANCELED){
