@@ -4,6 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0E1116"
     tools:context=".ut03.u3a9aBotonesEnlace">
 
+    <Button
+        android:id="@+id/u3a9abtnSMS"
+        android:layout_width="159dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#4DAC18"
+        android:text="SMS"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a9abtnNumero"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a9abtnNumero"
+        app:layout_constraintTop_toBottomOf="@+id/u3a9abtnNumero" />
+
+    <Button
+        android:id="@+id/u3a9abtnNumero"
+        android:layout_width="159dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="89dp"
+        android:backgroundTint="#4DAC18"
+        android:text="NÚMERO"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/u3a9abtnSMS"
+        app:layout_constraintEnd_toEndOf="@+id/u3a9abtnCancion"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a9abtnCancion"
+        app:layout_constraintTop_toBottomOf="@+id/u3a9abtnCancion" />
+
+    <Button
+        android:id="@+id/u3a9abtnCancion"
+        android:layout_width="159dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#4DAC18"
+        android:text="CANCIÓN"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/u3a9abtnMapa"
+        android:layout_width="159dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#4DAC18"
+        android:text="ABRIR MAPA"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a9abtnSMS"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a9abtnSMS"
+        app:layout_constraintTop_toBottomOf="@+id/u3a9abtnSMS" />
+
+    <TextView
+        android:id="@+id/u3a9atvError"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:gravity="center"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <Button
+        android:id="@+id/u3a9abtnAlarma"
+        android:layout_width="159dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#4DAC18"
+        android:text="ALARMA"
+        app:layout_constraintEnd_toEndOf="@+id/u3a9abtnMapa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a9abtnMapa"
+        app:layout_constraintTop_toBottomOf="@+id/u3a9abtnMapa" />
 </androidx.constraintlayout.widget.ConstraintLayout>
