@@ -21,7 +21,6 @@ public class u3a9aBotonesEnlace extends AppCompatActivity {
     public static final String NUMERO_PACO = "667445336";
     public static final String STRING_GEOLOCA = "geo:0,0?q=C.+de+la+Caoba,+1,+28005+Madrid";
 
-
     Button btnCancion, btnNumero, btnSMS, btnAbrirMapa, btnAlarma;
     TextView tvError;
     @Override
