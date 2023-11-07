@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.ejemplo.pmdm_2324.R;
@@ -29,6 +30,7 @@ public class u3a7bMetalSlugArma extends AppCompatActivity {
             finish();
         });
 
+
         imgArma2.setOnClickListener(view -> {
             Intent data = new Intent();
             data.putExtra(CADENA_ELECCION_ARMA, R.drawable.arma2);
@@ -49,5 +51,6 @@ public class u3a7bMetalSlugArma extends AppCompatActivity {
             setResult(Activity.RESULT_OK, data);
             finish();
         });
+
     }
 }

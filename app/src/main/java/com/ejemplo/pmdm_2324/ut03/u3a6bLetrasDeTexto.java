@@ -65,11 +65,11 @@ public class u3a6bLetrasDeTexto extends AppCompatActivity {
             ArrayList<String> letras = new ArrayList<>(cuentaLetras.keySet());
 
             i.putExtra(CLAVE_PRIMERA, letras.get(0));
-            i.putExtra(CLAVE_NUMERO_PRIMERA, cuentaLetras.get(letras.get(0)));
+            //i.putExtra(CLAVE_NUMERO_PRIMERA, cuentaLetras.get(0).intValue());
             i.putExtra(CLAVE_SEGUNDA, letras.get(1));
-            i.putExtra(CLAVE_NUMERO_SEGUNDA, cuentaLetras.get(letras.get((1))));
+            //i.putExtra(CLAVE_NUMERO_SEGUNDA, cuentaLetras.get(letras.get((1))));
             i.putExtra(CLAVE_TERCERA, letras.get(2));
-            i.putExtra(CLAVE_NUMERO_TERCERA, cuentaLetras.get(letras.get((2))));
+            //i.putExtra(CLAVE_NUMERO_TERCERA, cuentaLetras.get(letras.get((2))));
 
             setResult(Activity.RESULT_OK, i);
             finish();

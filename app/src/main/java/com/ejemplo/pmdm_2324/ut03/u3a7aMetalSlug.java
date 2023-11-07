@@ -13,9 +13,9 @@ import com.ejemplo.pmdm_2324.R;
 
 public class u3a7aMetalSlug extends AppCompatActivity {
 
-    public static final String CLAVE_IMAGEN = "CLAVEIMG";
+    public static final String CLAVE_PERSONAJE_USADO = "CLAVEIMG";
     ImageView usuJ1, usuJ2, armaJ1, armaJ2;
-
+    int seleccionPersonaje1, seleccionPersonaje2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,7 @@ public class u3a7aMetalSlug extends AppCompatActivity {
                     if(result.getResultCode() == Activity.RESULT_OK){
                         Intent data = result.getData();
                         usuJ1.setImageResource(data.getExtras().getInt(u3a7bMetalSlugPersonaje.CADENA_ELECCION));
+                        seleccionPersonaje1 = data.getExtras().getInt(u3a7bMetalSlugPersonaje.CADENA_ELECCION);
                     }
                 }
         );
@@ -42,6 +43,7 @@ public class u3a7aMetalSlug extends AppCompatActivity {
                     if(result.getResultCode() == Activity.RESULT_OK){
                         Intent data = result.getData();
                         usuJ2.setImageResource(data.getExtras().getInt(u3a7bMetalSlugPersonaje.CADENA_ELECCION));
+                        seleccionPersonaje2 = data.getExtras().getInt(u3a7bMetalSlugPersonaje.CADENA_ELECCION);
                     }
                 }
         );
@@ -68,11 +70,13 @@ public class u3a7aMetalSlug extends AppCompatActivity {
 
         usuJ1.setOnClickListener(view -> {
             Intent i = new Intent(this, u3a7bMetalSlugPersonaje.class);
+            i.putExtra(CLAVE_PERSONAJE_USADO,seleccionPersonaje2);
             lanzador.launch(i);
         });
 
         usuJ2.setOnClickListener(view -> {
             Intent i = new Intent(this, u3a7bMetalSlugPersonaje.class);
+            i.putExtra(CLAVE_PERSONAJE_USADO,seleccionPersonaje1);
             lanzador2.launch(i);
         });
 

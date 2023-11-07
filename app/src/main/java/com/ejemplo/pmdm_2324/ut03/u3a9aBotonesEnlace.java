@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.ejemplo.pmdm_2324.R;
 
 public class u3a9aBotonesEnlace extends AppCompatActivity {
-    public static final String URL_CANCION = "https://www.youtube.com/watch?v=RCJDY26yVcQ";
+    public static final String URL_CANCION = "https://google.es";
     public static final String CADENA_ERROR = "No se pudo realizar la acción";
     public static final String CADENA_SMS = "Te veo luego Paquito";
     public static final String NUMERO_PACO = "667445336";
@@ -36,9 +36,13 @@ public class u3a9aBotonesEnlace extends AppCompatActivity {
         tvError = findViewById(R.id.u3a9atvError);
 
         btnCancion.setOnClickListener(view -> {
-            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-            intent.putExtra(SearchManager.QUERY, URL_CANCION);
-            startActivity(intent);
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(URL_CANCION));
+            //startActivity(intent);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            } else {
+                tvError.setText(CADENA_ERROR);
+            }
         });
 
         btnNumero.setOnClickListener(view -> {
@@ -57,6 +61,15 @@ public class u3a9aBotonesEnlace extends AppCompatActivity {
             i.putExtra("sms_body", CADENA_SMS);
             startActivity(i);
         });
+
+        //Esto seria para abrir la app Gmail y que mande un correo
+
+        /*btnSMS.setOnClickListener(view -> {
+            Uri uri = Uri.parse("mailto:" + NUMERO_PACO);
+            Intent i = new Intent(Intent.ACTION_SENDTO, uri);
+            i.putExtra("mail_body", CADENA_SMS);
+            startActivity(i);
+        });*/
 
         btnAbrirMapa.setOnClickListener(view -> {
             Uri uri = Uri.parse(STRING_GEOLOCA);
