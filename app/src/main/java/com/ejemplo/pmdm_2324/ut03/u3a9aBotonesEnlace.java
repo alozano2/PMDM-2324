@@ -37,7 +37,6 @@ public class u3a9aBotonesEnlace extends AppCompatActivity {
 
         btnCancion.setOnClickListener(view -> {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(URL_CANCION));
-            //startActivity(intent);
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             } else {
@@ -47,7 +46,7 @@ public class u3a9aBotonesEnlace extends AppCompatActivity {
 
         btnNumero.setOnClickListener(view -> {
             Intent intent = new Intent(Intent.ACTION_DIAL);
-            intent.setData(Uri.parse("tel:" + "666765432"));
+            intent.setData(Uri.parse("tel:" + NUMERO_PACO));
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             } else {
@@ -59,7 +58,12 @@ public class u3a9aBotonesEnlace extends AppCompatActivity {
             Uri uri = Uri.parse("smsto:" + NUMERO_PACO);
             Intent i = new Intent(Intent.ACTION_SENDTO, uri);
             i.putExtra("sms_body", CADENA_SMS);
-            startActivity(i);
+            //startActivity(i);
+            if (i.resolveActivity(getPackageManager()) != null) {
+                startActivity(i);
+            } else {
+                tvError.setText(CADENA_ERROR);
+            }
         });
 
         //Esto seria para abrir la app Gmail y que mande un correo
@@ -74,7 +78,11 @@ public class u3a9aBotonesEnlace extends AppCompatActivity {
         btnAbrirMapa.setOnClickListener(view -> {
             Uri uri = Uri.parse(STRING_GEOLOCA);
             Intent i = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(i);
+            if (i.resolveActivity(getPackageManager()) != null) {
+                startActivity(i);
+            } else {
+                tvError.setText(CADENA_ERROR);
+            }
         });
 
         btnAlarma.setOnClickListener(view -> {
@@ -86,7 +94,12 @@ public class u3a9aBotonesEnlace extends AppCompatActivity {
                     putExtra(AlarmClock.EXTRA_MESSAGE, mensaje).
                     putExtra(AlarmClock.EXTRA_HOUR, hour).
                     putExtra(AlarmClock.EXTRA_MINUTES, minutes);
-            startActivity(i);
+            //startActivity(i);
+            if (i.resolveActivity(getPackageManager()) != null) {
+                startActivity(i);
+            } else {
+                tvError.setText(CADENA_ERROR);
+            }
         });
     }
 }
