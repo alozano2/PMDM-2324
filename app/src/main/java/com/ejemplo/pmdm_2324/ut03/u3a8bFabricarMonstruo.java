@@ -2,6 +2,7 @@ package com.ejemplo.pmdm_2324.ut03;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -16,7 +17,7 @@ public class u3a8bFabricarMonstruo extends AppCompatActivity {
         tvMuestraMonstruo = findViewById(R.id.u3a8btvMuestraMonstruo);
 
         u3a8aFabricarMonstruo monstruo;
-        monstruo = (u3a8aFabricarMonstruo) getIntent().getSerializableExtra(u3a8aFabricarMonstruo.CLAVE_MONSTRUO);
+        monstruo = (u3a8aFabricarMonstruo)getIntent().getSerializableExtra(u3a8aFabricarMonstruo.CLAVE_MONSTRUO);
         tvMuestraMonstruo.setText(monstruo.toString());
 
     }

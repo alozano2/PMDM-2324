@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.ejemplo.pmdm_2324.R;
 
@@ -18,12 +17,12 @@ public class u3a8aFabricarMonstruo extends AppCompatActivity implements Serializ
     Button btnConstruir;
     private String nombre;
     private int numeroManos, numeroPiernas;
-    private int color;
+    private  String color;
     public static final String CLAVE_MONSTRUO = "CLAVEDELMONS";
+    public static final String CLAVE_COLOR = "COLOR";
     public static final char BARRA_INCLINADA = 92;
-    public static final double NUMERO_MAXIMO_CUERPO = 0.8;
     public static final int NUMERO_DIVISION = 2;
-    public u3a8aFabricarMonstruo (String nombre, int color){
+    public u3a8aFabricarMonstruo (String nombre, String color){
         this.nombre = nombre;
         this.color = color;
         Random random = new Random();
@@ -47,8 +46,14 @@ public class u3a8aFabricarMonstruo extends AppCompatActivity implements Serializ
         for (int i = 0; i <= numeroManos; i++){
             double resto = (i + 1 % numeroManos);
             if(resto > numeroManos / NUMERO_DIVISION){
+                if(i == 0){
+                    cadena.append(" ");
+                }
                 cadena.append(BARRA_INCLINADA);
             }else{
+                if(i == 0){
+                    cadena.append(" ");
+                }
                 cadena.append("/");
             }
             if(resto == numeroManos / NUMERO_DIVISION){
@@ -70,7 +75,6 @@ public class u3a8aFabricarMonstruo extends AppCompatActivity implements Serializ
                 cadena.append(" ");
             }
         }
-
         return cadena.toString();
     }
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +82,7 @@ public class u3a8aFabricarMonstruo extends AppCompatActivity implements Serializ
         setContentView(R.layout.activity_u3a8a_fabricar_monstruo);
 
         btnConstruir = findViewById(R.id.u3a8abtnConstruirMonstruo);
-        u3a8aFabricarMonstruo monstruo = new u3a8aFabricarMonstruo("Pedro", R.color.green);
+        u3a8aFabricarMonstruo monstruo = new u3a8aFabricarMonstruo("Pedro", "verde");
 
         btnConstruir.setOnClickListener(view -> {
             Intent i = new Intent(this, u3a8bFabricarMonstruo.class);
