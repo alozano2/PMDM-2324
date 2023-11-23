@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <queries>
         <intent>
@@ -39,10 +39,28 @@
         android:roundIcon="@drawable/icono2"
         android:supportsRtl="true"
         android:theme="@style/Theme.PMDM2324"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".ut04.u4a2aMonstruo"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ut04.u4a1aBuenaPersona"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ut04.u4a1aHolaMundo"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -57,7 +75,7 @@
             android:exported="false" />
         <activity
             android:name=".ut03.u3a8aFabricarMonstruo"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -66,7 +84,7 @@
         </activity>
         <activity
             android:name=".ut03.u3a9aBotonesEnlace"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -81,7 +99,7 @@
             android:exported="false" />
         <activity
             android:name=".ut03.u3a7aMetalSlug"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -93,7 +111,7 @@
             android:exported="false" />
         <activity
             android:name=".ut03.u3a6aLetrasDeTexto"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -105,7 +123,7 @@
             android:exported="false" />
         <activity
             android:name=".ut03.u3a5aFibonacci"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -117,7 +135,7 @@
             android:exported="false" />
         <activity
             android:name=".ut03.u3a4aCalentamiento"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -129,7 +147,7 @@
             android:exported="false" />
         <activity
             android:name=".ut03.u3a3aSeleccion"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -141,7 +159,7 @@
             android:exported="false" />
         <activity
             android:name=".ut03.u3a2aCalcula"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -153,7 +171,7 @@
             android:exported="false" />
         <activity
             android:name=".ut03.u3a1aLanza"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -162,7 +180,7 @@
         </activity>
         <activity
             android:name=".ut02.u2a6PiedraPapel"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -171,7 +189,7 @@
         </activity>
         <activity
             android:name=".ut02.u2a5CitaTron3000"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -180,7 +198,7 @@
         </activity>
         <activity
             android:name=".ut02.u2a3Propinatron2000"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -189,7 +207,7 @@
         </activity>
         <activity
             android:name=".ut02.u2a2Coloneitor"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

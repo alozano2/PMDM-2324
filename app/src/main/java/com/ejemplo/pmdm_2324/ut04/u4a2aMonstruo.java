@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.ejemplo.pmdm_2324.R;
 
-public class u4a1aHolaMundo extends AppCompatActivity {
+public class u4a2aMonstruo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u4a1a_hola_mundo);
+        setContentView(R.layout.activity_u4a2a_monstruo);
     }
 }

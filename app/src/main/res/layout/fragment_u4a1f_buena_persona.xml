@@ -3,13 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ut04.u4f1HolaMundo">
+    tools:context=".ut04.u4a1fBuenaPersona">
 
     <!-- TODO: Update blank fragment layout -->
-
     <TextView
-        android:id="@+id/u4f1tvHola"
+        android:id="@+id/u4a1fBuenaPersona"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/u4a1ftvFumar"
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:background="#2B811D"
+        android:textColor="#FEFEFE"
+        android:textSize="48sp" />
 
 </FrameLayout>

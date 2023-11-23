@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut04.u4a1aBuenaPersona">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a1aFragFumar"
+        android:name="com.ejemplo.pmdm_2324.ut04.u4a1fBuenaPersona"
+        android:layout_width="411dp"
+        android:layout_height="115dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <TextView
+        android:id="@+id/u4a1atvFumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dias sin fumar:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/u4a1aFragFumar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.654" />
+
+    <TextView
+        android:id="@+id/u4a1atvPegar"
+        android:layout_width="148dp"
+        android:layout_height="26dp"
+        android:text="Dias sin pegar:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u4a1aFragFumar"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a1aFragPegar"
+        android:name="com.ejemplo.pmdm_2324.ut04.u4a1fBuenaPersona"
+        android:layout_width="411dp"
+        android:layout_height="115dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u4a1aFragFumar"
+        app:layout_constraintVertical_bias="0.21" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="229dp"
+        android:layout_height="29dp"
+        android:text="Dias sin atracar bancos:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u4a1aFragPegar"
+        app:layout_constraintVertical_bias="0.132" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a1aFragAtracar"
+        android:name="com.ejemplo.pmdm_2324.ut04.u4a1fBuenaPersona"
+        android:layout_width="411dp"
+        android:layout_height="115dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u4a1aFragPegar"
+        app:layout_constraintVertical_bias="0.4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
