@@ -4,6 +4,151 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4B81A5"
     tools:context=".ut04.u4a2aMonstruo">
 
+    <TextView
+        android:id="@+id/u4a2atvMonstruo"
+        android:layout_width="194dp"
+        android:layout_height="62dp"
+        android:gravity="center"
+        android:text="MONSTRUO"
+        android:textColor="#08574F"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/u4a2aetNombre"
+        android:layout_width="344dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="NOMBRE"
+        android:inputType="text"
+        android:textColor="#141515"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <EditText
+        android:id="@+id/u4a2aetBrazos"
+        android:layout_width="342dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="NUMERO MANOS"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2aetNombre"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u4a2aetNombre"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2aetNombre" />
+
+    <EditText
+        android:id="@+id/u4a2aetColor"
+        android:layout_width="342dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="92dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="COLOR"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2aetBrazos"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u4a2aetBrazos"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2aetBrazos" />
+
+    <Button
+        android:id="@+id/u4a2abtnConstruir"
+        android:layout_width="169dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#08574F"
+        android:text="CONSTRUIR"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2aetColor"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/u4a2aetColor"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2aetColor" />
+
+    <EditText
+        android:id="@+id/u4a2aetPiernas"
+        android:layout_width="342dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="NUMERO PIERNAS"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/u4a2aetColor"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2aetBrazos"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/u4a2aetBrazos"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2aetBrazos"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a2aFragMonstruo1"
+        android:name="com.ejemplo.pmdm_2324.ut04.u4a2fMonstruo"
+        android:layout_width="107dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:background="#FEFEFE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2abtnConstruir" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a2aFragMonstruo2"
+        android:name="com.ejemplo.pmdm_2324.ut04.u4a2fMonstruo"
+        android:layout_width="107dp"
+        android:layout_height="98dp"
+        android:background="#FEFEFE"
+        app:layout_constraintBottom_toBottomOf="@+id/u4a2aFragMonstruo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/u4a2aFragMonstruo1"
+        app:layout_constraintTop_toTopOf="@+id/u4a2aFragMonstruo1" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a2aFragMonstruo3"
+        android:name="com.ejemplo.pmdm_2324.ut04.u4a2fMonstruo"
+        android:layout_width="107dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="24dp"
+        android:background="#FEFEFE"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2aFragMonstruo1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u4a2aFragMonstruo1"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2aFragMonstruo1" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/u4a2aFragMonstruo4"
+        android:name="com.ejemplo.pmdm_2324.ut04.u4a2fMonstruo"
+        android:layout_width="107dp"
+        android:layout_height="98dp"
+        android:background="#FEFEFE"
+        app:layout_constraintBottom_toBottomOf="@+id/u4a2aFragMonstruo3"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2aFragMonstruo2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/u4a2aFragMonstruo2"
+        app:layout_constraintTop_toTopOf="@+id/u4a2aFragMonstruo3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/u4a2aspEleccion"
+        android:layout_width="342dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:entries="@array/eleccionMonstruo"
+        app:layout_constraintEnd_toEndOf="@+id/u4a2aetColor"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/u4a2aetColor"
+        app:layout_constraintTop_toBottomOf="@+id/u4a2aetColor" />
 </androidx.constraintlayout.widget.ConstraintLayout>

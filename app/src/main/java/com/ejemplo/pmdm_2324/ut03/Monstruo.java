@@ -1,28 +1,16 @@
 package com.ejemplo.pmdm_2324.ut03;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
 import android.text.SpannableStringBuilder;
-import android.widget.Button;
-
-import com.ejemplo.pmdm_2324.R;
 
 import java.io.Serializable;
 import java.util.Random;
 
-public class u3a8aFabricarMonstruo extends AppCompatActivity implements Serializable {
-    Button btnConstruir;
-    private String nombre;
-    private int numeroManos, numeroPiernas;
-    private  String color;
-    public static final String CLAVE_MONSTRUO = "CLAVEDELMONS";
-    public static final String CLAVE_COLOR = "COLOR";
+public class Monstruo implements Serializable {
+    String nombre, color;
     public static final char BARRA_INCLINADA = 92;
     public static final int NUMERO_DIVISION = 2;
-    public u3a8aFabricarMonstruo (String nombre, int numeroManos, int numeroPiernas, String color){
+    int numeroManos, numeroPiernas;
+    public Monstruo (String nombre, int numeroManos, int numeroPiernas, String color){
         this.nombre = nombre;
         this.color = color;
         this.numeroManos = numeroManos;
@@ -30,10 +18,6 @@ public class u3a8aFabricarMonstruo extends AppCompatActivity implements Serializ
         Random random = new Random();
         numeroManos = random.nextInt(5) + 1;
         numeroPiernas = random.nextInt(5) + 1;
-    }
-
-    public u3a8aFabricarMonstruo() {
-
     }
 
     public String toString () {
@@ -78,18 +62,5 @@ public class u3a8aFabricarMonstruo extends AppCompatActivity implements Serializ
             }
         }
         return cadena.toString();
-    }
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u3a8a_fabricar_monstruo);
-
-        btnConstruir = findViewById(R.id.u3a8abtnConstruirMonstruo);
-        u3a8aFabricarMonstruo monstruo = new u3a8aFabricarMonstruo("Pedro", 5, 6, "verde");
-
-        btnConstruir.setOnClickListener(view -> {
-            Intent i = new Intent(this, u3a8bFabricarMonstruo.class);
-            i.putExtra(u3a8aFabricarMonstruo.CLAVE_MONSTRUO, monstruo);
-            startActivity(i);
-        });
     }
 }

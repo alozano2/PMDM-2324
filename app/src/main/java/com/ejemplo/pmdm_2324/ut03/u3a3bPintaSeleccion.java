@@ -15,8 +15,6 @@ public class u3a3bPintaSeleccion extends AppCompatActivity {
     public static String cadenaTarrina = "VUV";
     public static String cadenaCucuruchoChocolate = "VVU";
 
-
-
     TextView eleccionVainilla, eleccionFresa, eleccionChocolate, eleccionTipo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

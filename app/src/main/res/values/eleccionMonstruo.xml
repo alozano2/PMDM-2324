@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eleccionMonstruo">
+        <item>MONSTRUO 1</item>
+        <item>MONSTRUO 2</item>
+        <item>MONSTRUO 3</item>
+        <item>MONSTRUO 4</item>
+    </string-array>
+</resources>
