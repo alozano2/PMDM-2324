@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut08.ut08a2SumaNumeros">
+
+    <TextView
+        android:id="@+id/ut08a2tvChar"
+        android:layout_width="118dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="+"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/ut08a2ptxtNum1"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="@+id/ut08a2ptxtNum1"
+        app:layout_constraintTop_toBottomOf="@+id/ut08a2ptxtNum1" />
+
+    <Button
+        android:id="@+id/ut08a2btnSumar"
+        android:layout_width="144dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:text="Sumar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/ut08a2ptxtNum2"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/ut08a2ptxtNum2"
+        app:layout_constraintTop_toBottomOf="@+id/ut08a2tvMuestraNumeros" />
+
+    <EditText
+        android:id="@+id/ut08a2ptxtNum1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:ems="10"
+        android:hint="Ingresa un numero"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ut08a2ptxtNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Ingresa un numero"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/ut08a2btnSumar"
+        app:layout_constraintEnd_toEndOf="@+id/ut08a2tvChar"
+        app:layout_constraintStart_toStartOf="@+id/ut08a2tvChar"
+        app:layout_constraintTop_toBottomOf="@+id/ut08a2tvChar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ut08a2tvMuestraNumeros"
+        android:layout_width="196dp"
+        android:layout_height="201dp"
+        android:gravity="center"
+        android:textSize="60sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.409" />
+
+    <Button
+        android:id="@+id/ut08a2btnVolver"
+        android:layout_width="106dp"
+        android:layout_height="52dp"
+        android:text="Volver"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/ut08a2tvMuestraNumeros"
+        app:layout_constraintEnd_toEndOf="@+id/ut08a2tvMuestraNumeros"
+        app:layout_constraintStart_toStartOf="@+id/ut08a2tvMuestraNumeros"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

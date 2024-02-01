@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut08.ut08a3ParesNones">
+
+    <CheckBox
+        android:id="@+id/ut08a3chkPares"
+        android:layout_width="133dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="88dp"
+        android:text="Pares"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/ut08a3chkNones"
+        android:layout_width="133dp"
+        android:layout_height="67dp"
+        android:text="Nones"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/ut08a3chkPares"
+        app:layout_constraintStart_toStartOf="@+id/ut08a3chkPares"
+        app:layout_constraintTop_toBottomOf="@+id/ut08a3chkPares" />
+
+    <EditText
+        android:id="@+id/ut08a3txtNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="Introduce un número"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/ut08a3chkNones"
+        app:layout_constraintStart_toStartOf="@+id/ut08a3chkNones"
+        app:layout_constraintTop_toBottomOf="@+id/ut08a3chkNones" />
+
+    <Button
+        android:id="@+id/ut08a3btnJugar"
+        android:layout_width="141dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="92dp"
+        android:text="Jugar"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ut08a3txtNumero"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="@+id/ut08a3txtNumero"
+        app:layout_constraintTop_toBottomOf="@+id/ut08a3txtNumero"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ut08a3tvInfoPartida"
+        android:layout_width="316dp"
+        android:layout_height="299dp"
+        android:layout_marginTop="88dp"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ut08a3btnReintentar"
+        android:layout_width="251dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="50dp"
+        android:text="Reintentar"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ut08a3tvInfoPartida"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/ut08a3tvInfoPartida"
+        app:layout_constraintTop_toBottomOf="@+id/ut08a3tvInfoPartida"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

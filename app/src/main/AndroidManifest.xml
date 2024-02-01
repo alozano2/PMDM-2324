@@ -45,6 +45,45 @@
         android:theme="@style/Theme.PMDM2324"
         tools:targetApi="31">
         <activity
+            android:name=".ut08.ut08a3ParesNones"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ut08.ut08a2SumaNumeros"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ut08.ut08a1NumeroAleatorio"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ut06.u6a1bMainLibros"
+            android:exported="false" />
+        <activity
+            android:name=".ut06.u6a1MainLibros"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ut05.u5a2MainDulces"
             android:exported="true">
             <intent-filter>
