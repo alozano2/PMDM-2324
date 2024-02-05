@@ -8,23 +8,23 @@ import com.ejemplo.pmdm_2324.ut06.u6a1Libros;
 
 import java.util.ArrayList;
 
-public class ut08a4LibrosViewModel extends ViewModel {
+public class ut08a5ViewModelGoleadores extends ViewModel {
     public static final double DELAY = 500;
-    private MutableLiveData<ArrayList<u6a1Libros>> libros;
+    private MutableLiveData<ArrayList<ut08a5ClaseGoleadores>> goleadores;
 
-    public LiveData<ArrayList<u6a1Libros>> getLibros() {
-        if(libros == null){
-            libros = new MutableLiveData<ArrayList<u6a1Libros>>();
+    public LiveData<ArrayList<ut08a5ClaseGoleadores>> getGoleadores() {
+        if(goleadores == null){
+            goleadores = new MutableLiveData<ArrayList<ut08a5ClaseGoleadores>>();
         }
-        return libros;
+        return goleadores;
     }
 
-    public void generoLibros() {
+    public void generoGoleadores() {
         new Thread(() -> {
             try{
                 Thread.sleep((long)((Math.random() * DELAY) + DELAY));
-                ArrayList<u6a1Libros> listaLibros = u6a1Libros.generador();
-                libros.postValue(listaLibros);
+                ArrayList<ut08a5ClaseGoleadores> listaGoleadores = ut08a5ClaseGoleadores.generador();
+                goleadores.postValue(listaGoleadores);
             }catch (InterruptedException e){
                 e.printStackTrace();
             }

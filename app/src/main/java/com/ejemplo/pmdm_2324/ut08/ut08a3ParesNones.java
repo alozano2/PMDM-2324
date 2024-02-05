@@ -13,7 +13,7 @@ import com.ejemplo.pmdm_2324.R;
 
 public class ut08a3ParesNones extends AppCompatActivity {
     CheckBox chkPares, chkNones;
-    TextView txtNumero, txtInfoPartida;
+    TextView txtNumero, txtInfoPartida, tvError;
     Button btnJugar, btnReintentar;
     boolean eligePar = true;
     @Override
@@ -27,6 +27,7 @@ public class ut08a3ParesNones extends AppCompatActivity {
         btnJugar = findViewById(R.id.ut08a3btnJugar);
         txtInfoPartida = findViewById(R.id.ut08a3tvInfoPartida);
         btnReintentar = findViewById(R.id.ut08a3btnReintentar);
+        tvError = findViewById(R.id.ut08a3tvError);
 
         ut08a3ParesNonesViewModel vm = new ViewModelProvider(this).get(ut08a3ParesNonesViewModel.class);
 
@@ -45,6 +46,13 @@ public class ut08a3ParesNones extends AppCompatActivity {
 
 
         btnJugar.setOnClickListener((v) -> {
+
+            if(txtNumero.getText().toString().isEmpty()){
+                tvError.setVisibility(View.VISIBLE);
+                tvError.setText("Error al ingresar un numero.");
+                return;
+            }
+
             if(chkPares.isChecked()){
                 int valorJugador = Integer.parseInt(txtNumero.getText().toString());
                 vm.resultadoMaquina(eligePar, valorJugador);
@@ -66,6 +74,7 @@ public class ut08a3ParesNones extends AppCompatActivity {
             btnJugar.setVisibility(View.VISIBLE);
             btnJugar.setEnabled(true);
             btnReintentar.setVisibility(View.INVISIBLE);
+            tvError.setVisibility(View.INVISIBLE);
         });
     }
 
